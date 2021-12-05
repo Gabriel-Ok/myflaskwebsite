@@ -1,0 +1,16 @@
+
+{% assets 'all_css' %}
+<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>
+{% endassets %}
+
+<h2 class="major">About Me</h2>
+<span class="image main"><img src="{{url_for('static', filename='images/pic03.jpg')}}"  /></span>
+<p>I am a full STALK Web Developer (Html,CSS, Python, Flask, Firebase, JavaScript,Node.js,React).
+    Having acquired fundamental knowledge and skills throughout my academic and
+    work experience of over 3 years.</p>
+
+{% assets 'all_js' %}
+<script type="text/javascript" src="{{ ASSET_URL }}">
+
+</script>
+{% endassets %}

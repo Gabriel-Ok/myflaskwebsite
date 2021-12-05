@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+  <head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/589b91a1ab.js" crossorigin="anonymous"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="shortcut icon" href="{{ url_for('static', filename='images/gabprofilepic.ico') }}">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    {% if title %}
+    <title>Gabriel - {{ title }}</title>
+    {%  else %}
+      <title>Gabriel</title>
+    {%  endif %}
+    {% extends "bootstrap/base.html" %}
+
+    {% assets 'all_css' %}
+    {{ fontawesome_css() }}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"/>
+    
+    {% endassets %}
+    
+
+  </head>
+{% block body %}
+
+<!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+        <header id="header">
+          <div class="logo">
+
+            <!-- <span class="icon fa-gem" ></span> -->
+
+          </div>
+          <div class="content">
+            <div class="inner">
+              <h1>WELCOME TO MY SPACE</h1>
+              <p>FEEL FREE, EXPLORE. FOR MORE, CLICK THE RESPECTIVE LINKS BELOW.</p>
+            </div>
+          </div>
+          <nav>
+            <ul class="links">
+              <li><a href="#projects">PROJECTS</a></li>
+              <li><a href="#gallery">GALLERY</a></li>
+              <li><a href="#about">ABOUT ME</a></li>
+
+              <!--<li><a href="#elements">Elements</a></li>-->
+            </ul>
+          </nav>
+        </header>
+
+          <ul class="icons">
+            <li ><a href="https://twitter.com/gabrielokiring1" class="icon brands fa fa-twitter" aria-hidden="true"><span class="label"></span></li></a>
+            <li ><a href="https://web.facebook.com/gabrielokiring" class="icon brands fab fa-facebook" aria-hidden="true"><span class="label"></span></a></li>
+            <li><a href="https://www.instagram.com/gabrielokiring/" class="icon brands fa-instagram" aria-hidden="true"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/Gabriel-Ok" class="icon brands fa-github" aria-hidden="true"><span class="label">GitHub</span></a></li>
+          </ul>
+
+      <!-- Main -->
+<div id="main">
+  
+
+          <!-- Projects -->
+          <article id="projects">
+          {% include "projects.html" %}
+
+          </article>
+
+          <!-- Gallery -->
+            <article id="gallery">
+              {% include "gallery.html" %}
+              </article>
+
+          <!-- Direction -->
+            <article id="about">
+              {% include "about.html" %}
+            </article>
+
+
+
+</div>
+
+      <!-- Footer -->
+      
+        <footer id="footer">
+         
+          <p class="copyright">&copy; Design: <a href="">GABRIEL 2021</a>.</p>
+        </footer>
+
+    </div>
+
+
+{% assets 'all_js' %}
+<script type="text/javascript" src="{{ ASSET_URL }}">
+ {{ fontawesome_js() }}
+</script>
+{% endassets %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock body %}
+</html>
